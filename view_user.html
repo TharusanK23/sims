@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Student Management</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Pre-loader start -->
+<div class="preloader loader" style="display: block; background:#f2f2f2;"> <img src="https://cuocthithietkekientruc.maidepnhasang.vn/loading.gif"  alt="#"/></div>
+<!-- Pre-loader end -->
+
+<div class="topbar bg-light" style="text-align: center; padding: 20px;">
+
+    <div class="row">
+        <div class="col-sm-8">
+            <h3 style="text-align: right;"> Student Information Management System </h3>
+        </div>
+        <!-- Button trigger modal -->
+        <div class="col-sm-2" >
+            <span class="loginuser"> <b> Welcome</b> <span>  Rajeevan </span> </span>
+        </div>
+
+        <div class="col-sm-2" style="text-align: center">
+            <a href="login.html" > <button class="btn btn-sm btn-outline-primary"> Log in </button> </a> |
+            <a href="signup.html"> <button class="btn btn-sm btn-outline-primary"> Sign up </button> </a>
+        </div>
+
+    </div>
+
+
+    <div style="margin-right: 100px;">
+        <a href="view_user.html" > User Management </a> |
+        <a href="create_course.html" > Course Management </a> |
+        <a href="course_allocate.html"> Course Allocation</a>
+    </div>
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html">
+        <img src="https://s3-us-west-2.amazonaws.com/recruitme-lk/companies/3321/65074096245111134119242.jpg" style="width: 65px;">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <div class="mr-auto" ></div>
+        <a href="index.html" style="margin-right: 10px;"> <button class="btn btn-outline-primary " type="submit">Home</button> </a>
+
+        <a href="register.html"> <button class="btn btn-outline-primary " type="submit"><i class="fas fa-user-plus"></i></button> </a>
+    </div>
+</nav>
+
+
+
+<div class="d-flex" id="wrapper">
+
+    <!-- Sidebar -->
+    <div class="bg-light border-right" id="sidebar-wrapper">
+        <div class="list-group list-group-flush">
+            <form class="navbar-form list-group-item list-group-item-action bg-light" role="search">
+                <div class="input-group add-on">
+                    <input class="form-control" placeholder="Search" name="srch-term" id="srch-term" type="text">
+                    <div class="input-group-btn">
+                        <button class="btn btn-outline-primary" type="submit"><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+            </form>
+            <a href="index.html" class="list-group-item list-group-item-action bg-light"><i class="fas fa-university"></i> Dashboard</a>
+            <a href="view_user.html" class="list-group-item list-group-item-action bg-light"><i class="fas fa-user"></i> User Management</a>
+            <a href="create_course.html" class="list-group-item list-group-item-action bg-light"><i class="fas fa-book-reader"></i></i> Course Management</a>
+            <a href="course_allocate.html" class="list-group-item list-group-item-action bg-light"><i class="fas fa-book"></i> Course Allocation</a>
+        </div>
+    </div>
+
+    <!-- /#sidebar-wrapper -->
+
+    <div id="page-content-wrapper">
+        <div class="container-fluid">
+
+            <div class="container row path">
+                <h5 style="padding: 15px;"> Home / View User</h5>
+            </div>
+
+            <div class="container" style="padding: 0px 150px 80px 80px;">
+
+                <div class="form-group row">
+                    <div class="col-sm-12">
+                        <div class="font-weight-bold" style="float: right">
+                            <a href="register.html"> <button type="submit" class="btn btn-outline-primary font-weight-bold"> Add New </button> </a>
+                        </div>
+                    </div>
+                </div>
+
+            <table class="table table-hover">
+                    <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Age</th>
+                        <th scope="col">Contact Number</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Edit</th>
+                        <th scope="col">Delete</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>Mark</td>
+                        <td>
+                            <a href="register.html"> <button type="button" class="btn btn-sm btn-outline-warning">
+                                <i class="fas fa-user-edit"></i>
+                            </button> </a>
+                         </td>
+                        <td>
+                            <button type="button" class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#exampleModal">
+                                <i class="far fa-trash-alt"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                        <td>Jacob</td>
+                        <td>
+                            <a href="register.html"> <button type="button" class="btn btn-sm btn-outline-warning">
+                                <i class="fas fa-user-edit"></i>
+                            </button> </a>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#exampleModal">
+                                <i class="far fa-trash-alt"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>
+                            <a href="register.html"> <button type="button" class="btn btn-sm btn-outline-warning">
+                                <i class="fas fa-user-edit"></i>
+                            </button> </a>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#exampleModal">
+                                <i class="far fa-trash-alt"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Delete User</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                Are you sure want to delete?
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Yes</button>
+                <button type="button" class="btn btn-outline-info">No</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.1.0/jquery-migrate.min.js"></script>
+<script src="js/main.js"></script>
+
+
+</body>
+</html>

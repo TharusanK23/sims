@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Student Management</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Pre-loader start -->
+<div class="preloader loader" style="display: block; background:#f2f2f2;"> <img src="https://cuocthithietkekientruc.maidepnhasang.vn/loading.gif"  alt="#"/></div>
+<!-- Pre-loader end -->
+
+    <div class="topbar bg-light" style="text-align: center; padding: 20px;">
+
+        <div class="row">
+            <div class="col-sm-8">
+                <h3 style="text-align: right;"> Student Information Management System </h3>
+            </div>
+            <!-- Button trigger modal -->
+            <div class="col-sm-2" >
+                <span class="loginuser"> <b> Welcome</b> <span>  Rajeevan </span> </span>
+            </div>
+
+            <div class="col-sm-2" style="text-align: center">
+                <a href="login.html" > <button class="btn btn-sm btn-outline-primary"> Log in </button> </a> |
+                <a href="signup.html"> <button class="btn btn-sm btn-outline-primary"> Sign up </button> </a>
+            </div>
+
+        </div>
+
+
+        <div style="margin-right: 100px;">
+            <a class="link" href="view_user.html" > User Management </a> |
+            <a class="link" href="create_course.html" > Course Management </a> |
+            <a class="link" href="course_allocate.html"> Course Allocation</a>
+        </div>
+    </div>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html">
+        <img src="https://s3-us-west-2.amazonaws.com/recruitme-lk/companies/3321/65074096245111134119242.jpg" style="width: 65px;">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <div class="mr-auto" ></div>
+<!--            <a href="index.html" style="margin-right: 10px;"> <button class="btn btn-outline-primary " type="submit">Home</button> </a>-->
+
+            <a href="register.html"> <button class="btn btn-outline-primary " type="submit"><i class="fas fa-user-plus"></i></button> </a>
+    </div>
+</nav>
+
+    <div class="d-flex" id="wrapper">
+
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+
+                <div class="container mt-2">
+                    <div class="row justify-content-center align-items-center text-center p-2">
+                        <div class="m-1 col-sm-8 col-md-6 col-lg-4 shadow-sm p-3 mb-5 bg-white border rounded">
+                            <div class="pt-5 pb-5">
+                                <img class="rounded mx-auto d-block" src="https://freelogovector.net/wp-content/uploads/logo-images-13/microsoft-cortana-logo-vector-73233.png" alt="" width=70px height=70px>
+                                <p class="text-center text-uppercase mt-3">Login</p>
+                                <form class="form text-center">
+
+                                    <div class="form-group input-group-md form-group-main">
+                                        <i class="far fa-envelope emaili" style="top: 45%;"></i>
+                                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                                    </div>
+                                    <div class="form-group input-group-md form-group-main">
+                                        <i class="fas fa-lock passwordi"  style="top: 56.5%;"></i>
+                                        <input type="password" class="form-control" id="password" placeholder="Password">
+
+                                    </div>
+                                    <button class="btn btn-lg btn-block btn-primary mt-4" type="submit" id="myButton">
+                                        Login
+                                    </button>
+                                    <a href="#" class="float-right mt-2">Forgot Password? </a>
+                                </form>
+                            </div>
+                            <a href="signup.html" class="text-center d-block mt-2">Sign up </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.1.0/jquery-migrate.min.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
